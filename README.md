@@ -1,3 +1,3 @@
-# Ce fichier contiendra les exercices des TP de PHP.
+# Ce fichier contiendra les exercices des TD de PHP.
 
 Belle journée à vous ! o/
