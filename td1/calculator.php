@@ -4,7 +4,7 @@
     $operateurs = '*+-/';
 ?>
 
-    <form action="calcul.php" method="get">
+    <form action="calcul.php" method="post">
         <p><input type="text" name="op1"></p>
         <p><input type="text" name="op2"></p>
         <?php
