@@ -1,5 +1,5 @@
 <?php
-    include_once ('fonctions.php');
+    include_once('fonctions.php');
     start_page('ici, ça calcule');
 ?>
 
