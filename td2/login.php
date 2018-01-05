@@ -8,7 +8,7 @@
     <form action="test-pass.php" method="post">
         <p> Identifiant <input type="text" name="login"></p>
         <p> Mot de passe <input type="password" name="passwd"></p>
-        <p> Connecter <input type="submit" name="action"></p>
+        <p> Se cnnecter <input type="submit" name="action"></p>
 
 
 <?php

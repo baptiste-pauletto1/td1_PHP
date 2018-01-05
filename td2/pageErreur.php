@@ -1,6 +1,6 @@
 <?php
     include 'utils.inc.php';
-    start_page('tu es un haker ^^');
+    start_page('tu né pa priviléjié ^^');
 
 
 

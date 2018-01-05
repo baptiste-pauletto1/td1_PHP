@@ -47,7 +47,17 @@
             echo 'Requête : ' . $query . '<br/>';
             exit();
         }
-
+    }
+    elseif($action == 'rec')
+    {
+        $file = 'data.txt';
+        if(!($file = fopen($file,'a'))){
+            echo 'Une erreur est survenue dans l\'ouverture du fichier';
+            exit();
+        }
+        fputs($file, 'Identifiant :' . $identifiant . ', Email : ' . $email . PHP_EOL);
+        fclose($file);
+        echo '<strong> FELICITATIONS VOUS ETES BIEN ENREGISTRE DANS LE FICHIER youhou ! </strong>';
     }
     else {
         echo '<br/><strong>Bouton non géré !</strong><br/>';

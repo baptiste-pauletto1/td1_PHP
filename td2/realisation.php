@@ -27,6 +27,7 @@
             </select></p>
         <p> Conditions générales d'utilisation <input type="checkbox" name="cgu" REQUIRED></p>
         <p> Envoyer le formulaire <input type="submit" name="action" value="mailer"></p>
+        <p> Enregistrement dans le fichier <input type="submit" name="action" value="rec"></p>
 
     </form>
 
