@@ -24,6 +24,8 @@ $c5 = imagecolorallocate($image,0x18,0x05,0xF1);
 $c6 = imagecolorallocate($image,0x69,0x69,0x69);
 $nbcolor = imagecolorallocate($image,0xAA,0xAB,0x00);
 
+imagefill($image,0,0,$bgcolor);
+
 $initdegree = round($degree);
 $degree += (($diagramvalue / 100) * 360);
 $finaldegree = round($degree);
