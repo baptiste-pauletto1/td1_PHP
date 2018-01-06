@@ -11,7 +11,7 @@
     $cptPays = 'SELECT COUNT(DISTINCT PAYS) FROM USER';
 
 ?>
-<body>
+
 <style>
     #users{
         border: 1px solid #ddd;
@@ -112,7 +112,7 @@
         ?>
 </table>
 <img src="image.php"/><br/>
-</body>
+
 <?php
     end_page();
 ?>
