@@ -62,14 +62,19 @@ class Book
 
     public function afficherLivre()
     {
-        echo 'Le livre : ' . $this->title . ' a été écrit par ' . $this->author . ' est édité par : ' . $this->editor . ' et compte ' . $this->pageNb . ' pages.';
+        echo 'Le livre : ' . $this->title . ' a été écrit par ' . $this->author . ' est édité par : ' . $this->editor . ' et compte ' . $this->pageNb . ' pages.' . PHP_EOL;
+    }
+
+    public function __toString()
+    {
+        return $this->title . $this->author . $this->editor . $this->pageNb;
     }
 
 
 }//Book()
 
 class Library{
-    const MAX_BOOKS = 20;
+    const MAX_BOOKS = 50000;
     private $name;
     private $address;
     private $max;
@@ -79,7 +84,10 @@ class Library{
     {
         $this->name = $name;
         $this->address = $address;
-        $this->max = $max;
+        if ($max>self::MAX_BOOKS)
+            $this->max=self::MAX_BOOKS;
+        else
+            $this->max = $max;
         $this->books = array();
     }
 
@@ -119,16 +127,10 @@ class Library{
         return $this->books;
     }
 
-
-    public function setBooks($books)
-    {
-        $this->books = $books;
-    }
-
     public function afficherLivres(){
         foreach ($this->books as $key => &$val)
         {
-            echo $val->afficherLivre();
+            echo  '</br>' . $val->afficherLivre() ;
         }
     }
 
@@ -141,7 +143,7 @@ class Library{
     }
 
     public function supprimerDoublons(){
-
+        $this->books = array_unique($this->books);
     }
 
     public function lireDeuxBibliotheques($library){
@@ -156,9 +158,7 @@ class Library{
     }
 
     public function triParAuteur(){
-        foreach ($this->books as $key => &$val){
-
-        }
+        asort($this->books);
     }
 
 }
