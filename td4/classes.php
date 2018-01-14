@@ -67,7 +67,7 @@ class Book
 
     public function __toString()
     {
-        return $this->title . $this->author . $this->editor . $this->pageNb;
+        return $this->author ;
     }
 
 
@@ -147,18 +147,20 @@ class Library{
     }
 
     public function lireDeuxBibliotheques($library){
+        echo '<strong>' . $this->name . ' : </strong></br>';
         foreach ($this->books as $key => &$val)
         {
-            echo $val->afficherLivre();
+            echo '</br>' . $val->afficherLivre();
         }
+        echo '<strong>' . $library->name . ' : </strong></br>';
         foreach ($library->books as $key => &$val)
         {
-            echo $val->afficherLivre();
+            echo '</br>' . $val->afficherLivre();
         }
     }
 
     public function triParAuteur(){
-        asort($this->books);
+        asort($this->books, SORT_STRING);
     }
 
 }

@@ -13,6 +13,7 @@
     <p>Adresse : <input type="text" name="address"></p>
     <p>Nombre de livres max : <input type="text" name="max"></p>
     <input type="submit" name="action" value="Creation">
+    <input type="submit" name="action" value="Deuxième bibliothèque">
 </form>
 <?php if (isset($_SESSION['library'])) {
     echo '<h2>' . $_SESSION['library']->getName() . '</h2>' . '<h4>' . ' se trouvant à ' . $_SESSION['library']->getAddress() . ' peut contenir ' . $_SESSION['library']->getMax() . ' livres !</h4>';
@@ -34,7 +35,11 @@
     <input type="submit" name="action" value="Supprimer le livre">
     <input type="submit" name="action" value="Oter les doublons">
     <input type="submit" name="action" value="Tri par auteur">
+    <input type="submit" name="action" value="Ajouter a la deuxieme bibliotheque">
 </form>
+</br>
 <?php
+    if (isset($_SESSION['library2']))
+        $_SESSION['library']->LireDeuxBibliotheques($_SESSION['library2']);
     end_page();
 ?>

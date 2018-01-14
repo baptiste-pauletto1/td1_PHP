@@ -1,9 +1,13 @@
 <?php
 require 'classes.php';
 session_start();
+
+//LIB
 $name = $_POST['name'];
 $address = $_POST['address'];
 $max = $_POST['max'];
+
+//BOOKS
 $title = $_POST['title'];
 $author = $_POST['author'];
 $editor = $_POST['editor'];
@@ -17,11 +21,16 @@ if ($action == 'Ajouter le livre')
     $_SESSION['library']->ajouterLivre($livre);
     header('Location: gestionBibliotheque.php');
 }
+if ($action == 'Ajouter a la deuxieme bibliotheque')
+{
+    $livre = new Book($title,$author,$editor,$pages);
+    $_SESSION['library2']->ajouterLivre($livre);
+    header('Location: gestionBibliotheque.php');
+}
 elseif($action == 'Creation')
 {
     $library = new Library($name,$address,$max);
     $_SESSION['library'] = $library;
-    $library->afficherLivres();
     header('Location: gestionBibliotheque.php');
 }
 elseif ($action == 'Supprimer le livre')
@@ -42,6 +51,12 @@ elseif ($action == 'Tri par auteur')
     $_SESSION['library']->triParAuteur();
     header('Location: gestionBibliotheque.php');
 
+}
+elseif ($action == 'Deuxième bibliothèque')
+{
+    $library = new Library($name,$address,$max);
+    $_SESSION['library2'] = $library;
+    header('Location: gestionBibliotheque.php');
 }
 else
     {
