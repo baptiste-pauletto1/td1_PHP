@@ -1,0 +1,47 @@
+msgid "" 
+msgstr "" 
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"X-Generator: pakilaro.alwaysdata.net"
+
+#: 
+msgid "Salut"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "Salut"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "Salut"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "3 ça suffit"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "3 ça suffit"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "Bonjour"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "Bonjour"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "JFUIF"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "TULIPE"
+msgstr "ouhhhh la belle traduction" 
+ 
+#: 
+msgid "couillasse"
+msgstr "ouhhhh la belle traduction" 
+ 
